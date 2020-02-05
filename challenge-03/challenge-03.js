@@ -203,7 +203,6 @@ pessoa.apresentacao = function () {
     método), que será concatenada com a frase de retorno, mostrando a resposta
     correta, de acordo com os dados inseridos no objeto.
     */
-    
 
 // Agora, apresente-se ;)
 //'Olá, eu sou o Pedro Siqueira, tenho 30 anos, 1.68, meu peso é 72 e, só hoje, eu já caminhei 38 metros!'
