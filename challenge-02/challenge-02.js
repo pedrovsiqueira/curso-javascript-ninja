@@ -51,7 +51,6 @@ function soma (x, y) {
   
   // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
   //function tresArgumentos (10, 2, 5)
-  
   // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
   //102
   
