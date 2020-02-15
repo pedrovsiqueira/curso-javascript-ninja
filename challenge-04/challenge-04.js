@@ -43,51 +43,52 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 var carro = {
-    marca: 'Fiat',
-    modelo: 'Argo',
-    placa: 'PQL-5677',
+    marca: "Fiat",
+    modelo: "Argo",
+    placa: "PQL-5677",
     ano: 2020,
-    cor: 'Branco',
+    cor: "branco",
     quantasPortas: 4,
     assentos: 5,
-    quantidadePessoas: 0
+    quantidadeDePessoas: 0
 }
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor = function (cor) {
+carro.mudarCor = function(cor){
     carro.cor = cor;
 }
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function () {
+carro.obterCor = function(){
     return carro.cor;
 }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-carro.obterModelo = function () {
+carro.obterModelo = function(){
     return carro.modelo;
 }
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca = function () {
+carro.obterMarca = function(){
     return carro.marca;
 }
+
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-carro.obterMarcaModelo = function () {
+carro.obterMarcaModelo = function(){
     return `Esse carro é um ${carro.obterMarca()} ${carro.obterModelo()}`
 }
 
@@ -107,23 +108,22 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function (qtdPessoas) {
-    var totalPessoas = carro.quantidadePessoas + qtdPessoas;
-    var assentosDisponiveis = carro.assentos - carro.quantidadePessoas
+carro.adicionarPessoasCarro = function(quantidade){
+    let assentosDisponiveis = carro.assentos - carro.quantidadeDePessoas;
 
-    if (carro.quantidadePessoas === carro.assentos) {
-        return "O carro já está cheio"
-    }
-
-    if (totalPessoas > carro.assentos) {
-        if (assentosDisponiveis === 1) {
+    if(carro.assentos === carro.quantidadeDePessoas){
+        return `O carro já está lotado!`
+    } else if(quantidade > assentosDisponiveis){
+        if(assentosDisponiveis > 1){
+            return `Só cabem mais ${assentosDisponiveis} pessoas!`
+        } else {
             return `Só cabem mais ${assentosDisponiveis} pessoa!`
         }
-        return `Só cabem mais ${assentosDisponiveis} pessoas!`
     }
-    carro.quantidadePessoas += qtdPessoas
-    return `Já temos ${totalPessoas} pessoas no carro`
+    carro.quantidadeDePessoas += quantidade;
+    return `Já temos ${carro.quantidadeDePessoas} pessoas no carro!`
 }
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
