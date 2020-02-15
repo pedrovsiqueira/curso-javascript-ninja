@@ -4,30 +4,30 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-var isTruthy = function (argumento) {
+var isTruthy = function ( argumento ) {
     return !!argumento ? true : false;
 }
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy(undefined)
+isTruthy( undefined )
 false
-isTruthy(null)
+isTruthy( null )
 false
-isTruthy(NaN)
+isTruthy( NaN )
 false
-isTruthy(0)
+isTruthy( 0 )
 false
-isTruthy("")
+isTruthy( "" )
 false
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-isTruthy("sss")
+isTruthy( "sss" )
 true
-isTruthy(10)
+isTruthy( 10 )
 true
-isTruthy(true)
+isTruthy( true )
 true
 
 /*
@@ -57,28 +57,28 @@ var carro = {
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor = function(cor){
+carro.mudarCor = function ( cor ) {
     carro.cor = cor;
 }
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function(){
+carro.obterCor = function () {
     return carro.cor;
 }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-carro.obterModelo = function(){
+carro.obterModelo = function () {
     return carro.modelo;
 }
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca = function(){
+carro.obterMarca = function () {
     return carro.marca;
 }
 
@@ -88,7 +88,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-carro.obterMarcaModelo = function(){
+carro.obterMarcaModelo = function () {
     return `Esse carro é um ${carro.obterMarca()} ${carro.obterModelo()}`
 }
 
@@ -108,18 +108,19 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoasCarro = function(quantidade){
+carro.adicionarPessoasCarro = function ( quantidade ) {
     let totalPessoas = carro.quantidadeDePessoas + quantidade;
     let assentosDisponiveis = carro.assentos - carro.quantidadeDePessoas;
+    let pluralOuSingular = assentosDisponiveis === 1 ? 'pessoa' : 'pessoas'
 
-    if(carro.assentos === carro.quantidadeDePessoas && totalPessoas >= carro.assentos){
+    if ( carro.assentos === carro.quantidadeDePessoas && totalPessoas >= carro.assentos ) {
         return `O carro já está lotado!`
     }
-    
-    if(totalPessoas > carro.assentos){
-        let pluralOuSingular = assentosDisponiveis === 1 ? 'pessoa' : 'pessoas'
+
+    if ( totalPessoas > carro.assentos ) {
         return `Só cabem mais ${assentosDisponiveis} ${pluralOuSingular}!`
-        }
+    }
+
     carro.quantidadeDePessoas += quantidade;
     return `Já temos ${carro.quantidadeDePessoas} pessoas no carro!`
 }
@@ -138,14 +139,14 @@ carro.obterCor()
 
 
 // Mude a cor do carro para vermelho.
-carro.mudarCor('Vermelho')
+carro.mudarCor( 'Vermelho' )
 
 // E agora, qual a cor do carro?
 carro.obterCor()
 //'Vermelho'
 
 // Mude a cor do carro para verde musgo.
-carro.mudarCor('Verde Musgo')
+carro.mudarCor( 'Verde Musgo' )
 
 // E agora, qual a cor do carro?
 carro.obterCor()
@@ -156,15 +157,15 @@ carro.obterMarcaModelo()
 //'Esse carro é um Fiat Argo'
 
 // Adicione 2 pessoas no carro.
-carro.adicionarPessoas(2)
+carro.adicionarPessoas( 2 )
 //'Já temos 2 pessoas no carro'
 
 // Adicione mais 4 pessoas no carro.
-carro.adicionarPessoas(4)
+carro.adicionarPessoas( 4 )
 //'Só cabem mais 3 pessoas!'
 
 // Faça o carro encher.
-carro.adicionarPessoas(3)
+carro.adicionarPessoas( 3 )
 //'Já temos 5 pessoas no carro'
 
 // Tire 4 pessoas do carro.
@@ -172,7 +173,7 @@ carro.quantidadePessoas = 1
 //1
 
 // Adicione 10 pessoas no carro.
-carro.adicionarPessoas(10)
+carro.adicionarPessoas( 10 )
 //'Só cabem mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
