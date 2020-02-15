@@ -2,17 +2,21 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// ?
+let myVar = [10, 'hello', true, false, 69]
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // ?
+function myFunction (arr){
+    return arr;
+}
+
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// ?
+console.log(myFunction(myVar)[1]);
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -20,18 +24,23 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// ?
+function myFunctionTwoPar(arr, number){
+    return arr[number]
+}
+
+console.log(myFunctionTwoPar(myVar, 0))
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
 // ?
+myVar2 = [10, 5, 'string', 'blu', 35]
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
+console.log(myFunctionTwoPar(myVar2))
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -47,7 +56,30 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book(nomeDoLivro){
+    return nomeDoLivro;
+}
+
+let bookNames = {
+    harryPotter: {
+        quantidadePaginas: 1000,
+        autor: "JK Rowling",
+        editora: "JK Productions"
+    },
+    lordOfTheRings: {
+        quantidadePaginas: 1500,
+        autor: "JRR Tolkien",
+        editora: "JRR Productions"
+    },
+    starWars: {
+        quantidadePaginas: 500,
+        autor: "Lucas Films",
+        editora: "LF Productions"
+    }
+}
+
+console.log(book(bookNames))
+
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
