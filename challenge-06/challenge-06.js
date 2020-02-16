@@ -33,32 +33,20 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
 */
-function showTeamPosition( number ) {
-    let mensagem = `O time que está em ${number}º lugar é o ${teams[number-1]}.`
-
-    switch ( number ) {
-        case 1:
-            console.log( mensagem )
-            break;
-        case 2:
-            console.log( mensagem )
-            break;
-        case 3:
-            console.log( mensagem )
-            break;
-        case 4:
-            console.log( mensagem )
-            break;
-        case 5:
-            console.log( mensagem )
-            break;
-        default:
-            console.log( `Não temos a informacao do time que está nessa posicao` );
-            break;
-    }
+function showTeamPosition( position ) {
+    return console.log( ( position < 1 || position > 5 ) ? `Não temos a informacao do time que está nessa posicao` :
+    `O time que está em ${position}º lugar é o ${teams[position-1]}.`)
 }
 
+showTeamPosition( 1 );
+showTeamPosition( 2 );
+showTeamPosition( 3 );
+showTeamPosition( 4 );
+showTeamPosition( 5 );
 showTeamPosition( 6 );
+showTeamPosition( 0 );
+
+
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
@@ -122,11 +110,11 @@ function convertToHex( color ) {
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-convertToHex(`orange`)
-convertToHex(`white`)
-convertToHex(`yellow`)
-convertToHex(`pink`)
-convertToHex(`grey`)
-convertToHex(`purple`)
-convertToHex(`blue`)
-convertToHex(`black`)
+convertToHex( `orange` )
+convertToHex( `white` )
+convertToHex( `yellow` )
+convertToHex( `pink` )
+convertToHex( `grey` )
+convertToHex( `purple` )
+convertToHex( `blue` )
+convertToHex( `black` )
