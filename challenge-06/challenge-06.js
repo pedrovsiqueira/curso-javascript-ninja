@@ -85,26 +85,27 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
 
 
 function convertToHex( color ) {
-    let mensagem = `O hexadecimal para a cor ${color} é:`
+    let hexa
     switch ( color ) {
         case 'blue':
-            console.log( mensagem, ( `#0000ff` ) )
+            hexa = `#0000ff`
             break;
         case 'red':
-            console.log( mensagem, ( `#ff0000` ) )
+            hexa = `#ff0000`
             break;
         case 'yellow':
-            console.log( mensagem, ( `#ffff00` ) )
+            hexa = `#ffff00`
             break;
         case 'orange':
-            console.log( mensagem, ( `#ffa500` ) )
+            hexa = `#ffa500`
             break;
         case 'black':
-            console.log( mensagem, ( `#000000` ) )
+            hexa = `#000000`
             break;
         default:
             console.log( `Não temos o equivalente hexadecimal para ${color}` )
     }
+    console.log(`O hexadecimal para a cor ${color} é: ${hexa}`)
 }
 
 /*
