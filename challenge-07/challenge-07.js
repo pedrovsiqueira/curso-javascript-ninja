@@ -1,13 +1,15 @@
 /*
 Crie um array com 5 items (tipos variados).
 */
-// ?
+let arr = [10, 15, 'hello darkness', null, {carro: branco}]
 
 /*
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-// ?
+function addItem (array, item){
+    array.push(item);
+}
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
