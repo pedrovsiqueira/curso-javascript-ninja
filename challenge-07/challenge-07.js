@@ -7,16 +7,16 @@ let arr = [10, 15, 'hello darkness', null, {carro: 'branco'}]
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-function addItem (array, item){
-    array.push(item);
-    console.log(array);
+function addItem (item){
+    arr.push(item);
+    console.log(arr)
 }
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-addItem(arr, [1, 'teste', undefined])
+addItem([1, 'teste', undefined])
 
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
