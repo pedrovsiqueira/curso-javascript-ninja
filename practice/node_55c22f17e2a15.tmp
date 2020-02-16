@@ -6,15 +6,8 @@ while(num <= 20){
  */
 
  let arr = [10, 30, 50, 70, 99]
- let aux = 0
+ let aux = arr.length
 
- while(aux != arr.length){
-     console.log(arr[aux])
-     aux++
+ while(aux > 0){
+     console.log(arr[aux++])
  }
-
- for(i = 0; i <= 20; i++){
-     console.log(i)
- }
-
- 
